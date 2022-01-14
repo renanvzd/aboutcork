@@ -37,11 +37,11 @@ export const Container = styled.header`
     }
   }
 
-  .barMenu {
-    display: none;
-  }
 
   > nav {
+    .barMenu {
+      display: none;
+    }
 
       ul {
         display: flex;
@@ -55,52 +55,66 @@ export const Container = styled.header`
     justify-content: space-between;
 
     > nav {
-
       .barMenu {
         display: flex;
         width: 50px;
         margin-right: 35px;
       }
 
-        .menubar {
-          background-color: yellow;
-          display: flex;
-          ul {
-            justify-content: normal;
-            padding-top: 2.5rem;
-            flex-direction: column;
-            align-items: center;
-            position: absolute;
-            top: 8.3vh;
-            right: 0%;
-            width: 40%;
-            height: 50rem;
-            background-color: ${({ theme }) => theme.backgroundLight};
-            /* transform: translateX(100%); */
-            transition: transform 0.3s ease-in;
-            opacity: 0.85 ;
-
-            li {
+      .navMenu {
+            width: 100%;
+            height: 100vh;
             display: flex;
-            // text-align: center;
-            // justify-content: center;
-            padding: 0;
-            margin: 0;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            right: 40%;
+            transition: 1000ms;
+            z-index: 1;
+          }
 
-            a {
-              text-align: center;
-              display: inline-block;
-              position: relative;
-              padding: 0rem 1rem;
+      .navMenuActive {
+         right: 0%;
+         transition: transform 0.3s ease-in;
+       }
 
-              line-height: 5rem;
+          .listItems {
+            display: flex;
+            ul {
+              justify-content: normal;
+              padding-top: 2.5rem;
+              flex-direction: column;
+              align-items: center;
+              position: absolute;
+              top: 8.3vh;
+              right: 0%;
+              width: 40%;
+              height: 50rem;
+              background-color: ${({ theme }) => theme.backgroundLight};
+              transform: translateX(100%);
+              transition: transform 0.3s ease-in ease-out;
+              opacity: 0.85 ;
 
-              font-size: 1.2rem;
-              transition: color 0.2s;
+              li {
+              display: flex;
+              padding: 0;
+              margin: 0;
+
+              a {
+                text-align: center;
+                display: inline-block;
+                position: relative;
+                padding: 0rem 1rem;
+
+                line-height: 5rem;
+
+                font-size: 1.2rem;
+                transition: color 0.2s;
+              }
             }
           }
           }
-        }
+
     }
   }
 `;

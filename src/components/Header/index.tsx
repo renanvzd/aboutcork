@@ -1,9 +1,13 @@
+import { useState } from 'react'
 import NavLink from './NavLink';
 import { Container } from './styles';
 import fourleaf from '../../assets/four-leaf.png';
 
 
 function Header() {
+  const [sidebar, setSidebar] = useState(true)
+  const showSidebar = () => setSidebar(!sidebar)
+
   return (
     <Container>
       <div>
@@ -13,27 +17,20 @@ function Header() {
 
 
       <nav>
-        <img className='barMenu' src='https://i.imgur.com/cmahuLK.png' alt='menu' />
-        <div className='menubar'>
-          <ul>
-            <li>
-
+        <img className='barMenu' src='https://i.imgur.com/cmahuLK.png' onClick={showSidebar} alt='menu' />
+        <div className={sidebar ? 'navMenuActive' : 'navMenu'}>
+          {/* <div className='menubar'>
+        <div className='navMenuActive'> */}
+          <div className='listItems'>
+            <ul>
               <NavLink title="Home" path="/" />
-            </li>
-            <li>
               <NavLink title="Historias" path="/projects" includes />
-            </li>
-            <li>
               <NavLink title="Duvidas" path="/projects" includes />
-            </li>
-            <li>
               <NavLink title="Dicas" path="/projects" includes />
-            </li>
-            <li>
-
               <NavLink title="Galeria" path="/projects" includes />
-            </li>
-          </ul>
+
+            </ul>
+          </div>
         </div>
       </nav>
     </Container>
