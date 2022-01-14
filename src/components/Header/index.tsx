@@ -16,11 +16,23 @@ function Header() {
         <img className='barMenu' src='https://i.imgur.com/cmahuLK.png' alt='menu' />
         <div className='menubar'>
           <ul>
-            <NavLink title="Home" path="/" />
-            <NavLink title="Historias" path="/projects" includes />
-            <NavLink title="Duvidas" path="/projects" includes />
-            <NavLink title="Dicas" path="/projects" includes />
-            <NavLink title="Galeria" path="/projects" includes />
+            <li>
+
+              <NavLink title="Home" path="/" />
+            </li>
+            <li>
+              <NavLink title="Historias" path="/projects" includes />
+            </li>
+            <li>
+              <NavLink title="Duvidas" path="/projects" includes />
+            </li>
+            <li>
+              <NavLink title="Dicas" path="/projects" includes />
+            </li>
+            <li>
+
+              <NavLink title="Galeria" path="/projects" includes />
+            </li>
           </ul>
         </div>
       </nav>

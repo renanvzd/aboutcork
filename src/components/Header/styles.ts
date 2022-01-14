@@ -13,7 +13,7 @@ export const Container = styled.header`
   align-items: center;
   text-align: center;
   grid-template-columns: 15% 85%;
-  height: 5rem;
+  height: 4.54rem;
   background-color: ${({ theme }) => theme.background};
   border-bottom: 1px solid ${({ theme }) => theme.backgroundLight};
 
@@ -56,7 +56,6 @@ export const Container = styled.header`
 
     > nav {
 
-
       .barMenu {
         display: flex;
         width: 50px;
@@ -64,13 +63,46 @@ export const Container = styled.header`
       }
 
         .menubar {
-
+          background-color: yellow;
+          display: flex;
           ul {
-            display: none;
+            justify-content: normal;
+            padding-top: 2.5rem;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 8.3vh;
+            right: 0%;
+            width: 40%;
+            height: 50rem;
+            background-color: ${({ theme }) => theme.backgroundLight};
+            /* transform: translateX(100%); */
+            transition: transform 0.3s ease-in;
+            opacity: 0.85 ;
+
+            li {
+            display: flex;
+            // text-align: center;
+            // justify-content: center;
+            padding: 0;
+            margin: 0;
+
+            a {
+              text-align: center;
+              display: inline-block;
+              position: relative;
+              padding: 0rem 1rem;
+
+              line-height: 5rem;
+
+              font-size: 1.2rem;
+              transition: color 0.2s;
+            }
           }
+          }
+        }
     }
   }
-
 `;
 
 export const NavLinkContainer = styled.li<NavLinkProps>`
