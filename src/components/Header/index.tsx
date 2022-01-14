@@ -11,14 +11,18 @@ function Header() {
         <h1>Cork</h1>
       </div>
 
+
       <nav>
-        <ul>
-          <NavLink title="Home" path="/" />
-          <NavLink title="Historias" path="/projects" includes />
-          <NavLink title="Duvidas" path="/projects" includes />
-          <NavLink title="Dicas" path="/projects" includes />
-          <NavLink title="Galeria" path="/projects" includes />
-        </ul>
+        <img className='barMenu' src='https://i.imgur.com/cmahuLK.png' alt='menu' />
+        <div className='menubar'>
+          <ul>
+            <NavLink title="Home" path="/" />
+            <NavLink title="Historias" path="/projects" includes />
+            <NavLink title="Duvidas" path="/projects" includes />
+            <NavLink title="Dicas" path="/projects" includes />
+            <NavLink title="Galeria" path="/projects" includes />
+          </ul>
+        </div>
       </nav>
     </Container>
   );
