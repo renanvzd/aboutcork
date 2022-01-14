@@ -11,11 +11,15 @@ function Header() {
         <h1>Cork</h1>
       </div>
 
-
-      <ul>
-        <NavLink title="Home" path="/" />
-        <NavLink title="Projects" path="/projects" includes />
-      </ul>
+      <nav>
+        <ul>
+          <NavLink title="Home" path="/" />
+          <NavLink title="Historias" path="/projects" includes />
+          <NavLink title="Duvidas" path="/projects" includes />
+          <NavLink title="Dicas" path="/projects" includes />
+          <NavLink title="Galeria" path="/projects" includes />
+        </ul>
+      </nav>
     </Container>
   );
 }

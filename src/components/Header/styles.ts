@@ -7,10 +7,10 @@ interface NavLinkProps {
 
 export const Container = styled.header`
   width: 100%;
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
   text-align: center;
+  grid-template-columns: 15% 85%;
 
   height: 5rem;
   border-bottom: 1px solid ${({ theme }) => theme.backgroundLight};
@@ -35,11 +35,12 @@ export const Container = styled.header`
     }
   }
 
-
-  ul {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+  > nav {
+      ul {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+      }
   }
 `;
 
