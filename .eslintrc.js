@@ -36,5 +36,6 @@ module.exports = {
     'jsx-a11y/no-static-element-interactions': 'off',
     'react/button-has-type': 'off',
     'react/jsx-no-duplicate-props': 'off',
+    'react/self-closing-comp': 'off',
   }
 };

@@ -45,8 +45,12 @@ export const Container = styled.header`
 
       ul {
         display: flex;
-        gap: 2rem;
+        gap: 3rem;
         justify-content: center;
+
+        a {
+          font-size: 1.5rem;
+        }
       }
   }
 
@@ -62,40 +66,40 @@ export const Container = styled.header`
       }
 
       .navMenu {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            position: fixed;
-            top: 0;
-            right: 40%;
-            transition: 1000ms;
-            z-index: 1;
-          }
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        margin-top: 1rem;
+        right: 40%;
+        transition: 1000ms;
+        z-index: 1;
+      }
 
       .navMenuActive {
-         right: 0%;
-         transition: transform 0.3s ease-in;
-       }
+        right: 0%;
+        transition: transform 0.3s ease-in;
+      }
 
-          .listItems {
-            display: flex;
-            ul {
-              justify-content: normal;
-              padding-top: 2.5rem;
-              flex-direction: column;
-              align-items: center;
-              position: absolute;
-              top: 8.3vh;
-              right: 0%;
-              width: 40%;
-              height: 50rem;
-              background-color: ${({ theme }) => theme.backgroundLight};
-              transform: translateX(100%);
-              transition: transform 0.3s ease-in ease-out;
-              opacity: 0.85 ;
+      .listItems {
+        display: flex;
 
-              li {
+        ul {
+          justify-content: normal;
+          padding-top: 2.5rem;
+          flex-direction: column;
+          align-items: center;
+          position: absolute;
+          right: 0%;
+          width: 40%;
+          height: 50rem;
+          background-color: black;
+          transform: translateX(100%);
+          transition: transform 0.3s ease-in ease-out;
+          opacity: 0.9 ;
+
+            li {
               display: flex;
               padding: 0;
               margin: 0;
@@ -105,32 +109,31 @@ export const Container = styled.header`
                 display: inline-block;
                 position: relative;
                 padding: 0rem 1rem;
-
-                line-height: 5rem;
-
-                font-size: 1.2rem;
+                padding-top: 2rem;
+                line-height: 1rem;
+                font-size: 1.4rem;
                 transition: color 0.2s;
               }
             }
-          }
-          }
-
+        }
+      }
     }
   }
 `;
 
 export const NavLinkContainer = styled.li<NavLinkProps>`
   a {
-    text-transform: uppercase;
     color: ${props =>
-    props.isActive ? props.theme.primary : props.theme.textHighlight};
+    props.isActive ? props.theme.textMenuBarActive : props.theme.textMenuBarOff};
+    font-weight: ${props =>
+    props.isActive ? 600 : props.theme.textHighlight};
     transition: 0.5s;
 
     &:hover {
       color: ${props =>
     props.isActive
-      ? lighten(0.2, props.theme.primary)
-      : lighten(0.2, props.theme.textHighlight)};
+      ? lighten(0.2, props.theme.textMenuBarActive)
+      : lighten(0.2, props.theme.textMenuHover)};
     }
   }
 `;
