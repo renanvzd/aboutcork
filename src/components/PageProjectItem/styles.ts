@@ -30,7 +30,7 @@ export const Container = styled.div<ContainerProps>`
     }
 
     > section {
-      z-index: 2;
+      z-index: 0;
       h1 {
         color: ${({ theme }) => theme.primary};
         font-size: 1.5rem;

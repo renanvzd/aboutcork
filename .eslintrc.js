@@ -34,6 +34,8 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
-    'react/button-has-type': 'off'
+    'react/button-has-type': 'off',
+    'react/jsx-no-duplicate-props': 'off',
+    'react/self-closing-comp': 'off',
   }
 };
